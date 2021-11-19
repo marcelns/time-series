@@ -98,3 +98,9 @@ cbind(Data=beer2, Fitted=fitted(fit.beer)) %>%
   ggtitle("Quarterly beer production") +
   scale_colour_brewer(palette="Dark2", name="Quarter") +
   geom_abline(intercept=0, slope=1)
+
+# using a Fourier Series
+fourier.beer <- tslm(beer2 ~ trend + fourier(beer2, K=2))
+summary(fourier.beer)
+
+
