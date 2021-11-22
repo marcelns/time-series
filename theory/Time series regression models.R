@@ -103,4 +103,14 @@ cbind(Data=beer2, Fitted=fitted(fit.beer)) %>%
 fourier.beer <- tslm(beer2 ~ trend + fourier(beer2, K=2))
 summary(fourier.beer)
 
+##### Forecasting beer
 
+beer2 <- window(ausbeer, start=1992)
+fit.beer <- tslm(beer2 ~ trend + season)
+summary(fit.beer)
+fcast <- forecast(fit.beer)
+autoplot(fcast) +
+  ggtitle("Forecasts of beer production using regression") +
+  xlab("Year") + ylab("megalitres")
+
+fcast
