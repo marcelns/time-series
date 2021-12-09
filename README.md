@@ -5,8 +5,11 @@ The textbook can be found in https://otexts.com/fpp2/intro.html
 Cheers!
 
 ## Folders
-**theory**: contains a python notebook, a python script and a R scrip with some modeling theory and principles
+**R**: contains the original R script
 
-**test-models**: some textbook models
+**data**: the databases used in the models
 
-**house-property-time-series**: is a folder for a model project in time series, once the suficcient theory is acquired I'll start the modelling
+## Files
+**time_series_notebook.ipynb**: The python implementation with the theory explained
+
+**time_series_models.py**: The rework of the original code in Python
